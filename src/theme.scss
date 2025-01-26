@@ -1,0 +1,274 @@
+// theme variables
+
+:root {
+    --theme-primary: #17174d;
+    --theme-secondary: #2594ed;
+}
+
+//   Landing =====================================================
+
+.landing_page {
+    min-height: 100vh;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    padding: 15px;
+
+    form {
+        width: 100%;
+        max-width: 790px;
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #2494ed, #7f1cbd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h2{
+            text-align: center;
+            font-weight: 300;
+            color: var(--theme-secondary);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .landing {
+            min-height: 70px;
+            width: 100%;
+            background: #fff;
+            padding: 10px 70px 10px 32px;
+            font-size: 16px;
+            color: #666;
+            border-radius: 34px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.05);
+
+            .select_patient {
+                font-size: 16px;
+                color: #333;
+                background-color: transparent;
+                display: inline-block;
+                vertical-align: baseline;
+                font-size: 16px;
+                border: 0;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 4px 0 4px 2px;
+
+                &:focus,
+                &:active {
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .btn-search {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            -ms-flex-pack: center;
+            justify-content: center;
+            align-items: center;
+            color: #ccc;
+            height: 100%;
+            transition: .3s linear;
+
+
+            &:hover,
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+
+                i {
+                    color: #444;
+                }
+
+            }
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 71px;
+            width: 90%;
+            padding: 0;
+            list-style: none;
+            border-radius: 5px;
+
+            li {
+                background: #fff;
+                padding: 10px 15px;
+                margin-bottom: 1px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #fbfbfb;
+
+                }
+            }
+        }
+    }
+}
+
+.autocomplete-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.autocomplete-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+/* Layout =================================================== */
+
+.sidebar {
+    padding: 20px 0;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+    .list-group-item {
+        border-bottom: 0;
+        padding: 0;
+
+        a {
+            display: block;
+            padding: 8px 20px;
+            transition: .3s;
+            border-left: 5px solid transparent;
+
+            i {
+                margin-right: 15px;
+            }
+        }
+
+        &:hover {
+            background: #fafbff;
+        }
+    }
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+.navbar-brand {
+    width: 260px;
+    background: #fff;
+    text-align: center;
+    color: var(--theme-primary) !important;
+    font-weight: 700;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+    span {
+        color: var(--theme-secondary);
+        // font-weight: 400;
+    }
+}
+
+.list-group {
+    .text-primary {
+        border-color: var(--theme-secondary) !important;
+        color: var(--theme-secondary) !important;
+        font-weight: 500;
+    }
+}
+.btn.show {
+    border-color: transparent !important;
+}
+.content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.tab-content {
+    border: 1px solid #dee2e6;
+    padding: 30px;
+    border-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.nav-tabs {
+    .nav-link {
+        background: rgba(0, 0, 0, 0.02);
+        margin-right: 2px;
+        color: #7f93af;
+        font-weight: 500;
+        &.active,  &:hover{
+            color: var(--theme-secondary) !important;
+        }
+       
+
+    }
+}
+
+.header-search{
+    width: 20%;
+    input{
+        border-radius: 30px;
+    }
+}
+.bg-ylw{    
+    background: #fff1e7 !important;
+    border: 1px solid #e7cebe;
+}
+.chips li{
+    display: inline-block;
+    padding: 5px 18px;
+    margin-right: 5px;
+    color: var(--theme-secondary);
+    border-radius: 20px;
+    border: 1px solid var(--theme-secondary);
+}
+.list .list-group-item {
+    background: #fbfbfb !important;
+}
+.icon{
+    color: #ccc;
+}
